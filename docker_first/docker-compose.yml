@@ -1,0 +1,16 @@
+version: "3"
+services:
+  myapp:
+    image: secondimg
+    ports:
+      - "1024:1024"
+    networks:
+      - monreseau
+  redis:
+    image: redis
+    ports: 
+      - "6379:6379"
+    networks : 
+      - monreseau
+networks:
+  monreseau: 
